@@ -3,9 +3,10 @@
     <div class="flex items-center flex-no-shrink text-white mr-6">
       <% logo_path = current_user ? dashboard_index_path : root_path %>
       <%= link_to logo_path do %>
-        <%= image_tag "avatar.png",  style: "max-height: 42px" %>
+        <%# <%= image_tag "avatar.png",  style: "max-height: 42px" %>
+        <span class="font-semibold text-xl tracking-tight text-gray-700"><%= ENV['company_name'] %></span>
       <% end %>
-      <span class="font-semibold text-xl tracking-tight"><%= ENV['company_name'] %></span>
+      
     </div>
     <div class="block sm:hidden">
       <button class="navbar-burger flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white" data-action="click->header#toggleMobileNav">
@@ -24,9 +25,9 @@
           <%= link_to 'Account', account_index_path, class: nav_link_classes %>
           <%= link_to 'Logout', logout_path, class: nav_link_classes %>
         <% else %>
-          <%= link_to 'Contact', 'https://twitter.com/intent/tweet?text=@ryanckulp%20question...', target: '_blank', class: nav_link_classes  %>
-          <%= link_to 'Login', new_user_session_path, class: nav_link_classes %>
-          <%= link_to 'Signup', new_user_registration_path, class: 'ml-8 whitespace-nowrap text-base font-medium inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700' %>
+          <%= link_to 'Contact', 'https://twitter.com/intent/tweet?text=.@antdke%20question...', target: '_blank', class: nav_link_classes  %>
+          <%= link_to 'Who Built This?', 'https://github.com/antdke', class: nav_link_classes %>
+          <%# <%= link_to 'Signup', new_user_registration_path, class: 'ml-8 whitespace-nowrap text-base font-medium inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700' %>
         <% end %>
       </div>
     </div>
