@@ -231,6 +231,8 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    ruby-openai (3.0.2)
+      httparty (>= 0.18.1, < 0.21.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.6.1)
       childprocess (>= 0.5, < 5.0)
@@ -307,6 +309,7 @@ DEPENDENCIES
   rails
   redis
   rspec-rails
+  ruby-openai
   selenium-webdriver
   shoulda-callback-matchers
   shoulda-matchers
