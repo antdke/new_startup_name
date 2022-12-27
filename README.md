@@ -1,4 +1,4 @@
-# Speedrail
+# NewStartupName
 a Rails 7 boilerplate template by [@ryanckulp](https://twitter.com/ryanckulp), created to ship SaaS apps quickly. Learn how to use this at [24 Hour MVP](https://founderhacker.com/24-hour-mvp).
 
 features:
