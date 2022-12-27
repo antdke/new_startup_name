@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  resources :queries, only: [:create]
+
   devise_for :users
   get 'logout', to: 'pages#logout', as: 'logout'
 
