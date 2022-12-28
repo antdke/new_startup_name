@@ -4,10 +4,12 @@ class Query < ApplicationRecord
   validates_length_of :query, minimum: 1
 
   #callback
-  after_create :generate_name
+  after_create :send_query
 
   # send query text to OpenAI and get the result back and update the query object with the generated name
-  def generate_name
-    puts "Yo name generated!"
+  def send_query
+    #puts "Yo name generated!"
+    generated_name = OpenaiService.generate_name(self)
+    self.update(generated_name: generated_name)
   end
 end
