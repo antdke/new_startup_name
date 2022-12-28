@@ -8,7 +8,7 @@ class OpenaiService
     response = client.completions(
         parameters: {
         model: "text-davinci-001",
-        prompt: "Brainstorm a cool name for a startup that does the following: #{query.query}",
+        prompt: "Suggest one unique name for a business that does the following: #{query.query}",
         max_tokens: 100,
         temperature: 1
     })
