@@ -15,7 +15,9 @@
 
 <!-- Generated Name -->
 <div class="mx-auto text-center mb-10">
-  <p><%= @generated_name %></p>
+  <% if session[:generated_name] %>
+    <p><%= session[:generated_name] %></p>
+  <% end %>
 </div>
 
 <%= form_for(Query.new) do |f| %>

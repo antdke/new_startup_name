@@ -2,10 +2,6 @@ class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:logout]
 
   def home
-    if session[:query_id]
-      @generated_name = Query.find(session[:query_id]).generated_name
-    end 
-    
   end
 
   def logout
